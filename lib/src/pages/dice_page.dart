@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class DicePage extends StatelessWidget {
   const DicePage({super.key});
@@ -9,13 +9,13 @@ class DicePage extends StatelessWidget {
       child: Row(
         children: <Widget>[
           Expanded(
-              child: Padding(
-                  padding: const EdgeInsets.all(16.0),
+              child: TextButton(
+                  onPressed: () {},
                   child: Image.asset('assets/images/dice/dice1.png'))),
 
           Expanded(
-              child: Padding(
-                  padding: const EdgeInsets.all(16.0),
+              child: TextButton(
+                  onPressed: () {},
                   child: Image.asset('assets/images/dice/dice2.png')))
           // Image(image: AssetImage('assets/images/dice/dice1.png'), width: 100,)
         ],
