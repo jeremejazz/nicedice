@@ -10,8 +10,8 @@ class NiceDice extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.red,
-        appBar: AppBar( title: Text("Nice Dice"), backgroundColor: Colors.red,),
+        backgroundColor: Colors.black,
+        appBar: AppBar( title: Text("Nice Dice"), foregroundColor: Colors.white,  backgroundColor: Colors.black,),
         body: DicePage(),
         ),
       );
