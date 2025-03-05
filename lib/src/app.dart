@@ -13,6 +13,7 @@ class NiceDice extends StatelessWidget {
         backgroundColor: Colors.black,
         appBar: AppBar( title: Text("Nice Dice"), foregroundColor: Colors.white,  backgroundColor: Colors.black,),
         body: DicePage(),
+
         ),
       );
 
