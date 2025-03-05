@@ -11,11 +11,13 @@ class NiceDice extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.black,
-        appBar: AppBar( title: Text("Nice Dice"), foregroundColor: Colors.white,  backgroundColor: Colors.black,),
-        body: DicePage(),
-
+        appBar: AppBar(
+          title: Text("Nice Dice"),
+          foregroundColor: Colors.white,
+          backgroundColor: Colors.black,
         ),
-      );
-
+        body: DicePage(),
+      ),
+    );
   }
 }
