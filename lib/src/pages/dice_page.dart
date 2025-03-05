@@ -38,9 +38,10 @@ void rollDice() {
   Widget build(BuildContext context) {
     return Center(
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Expanded(
-            flex: 12,
+            flex: 4,
             child: Row(
             children: <Widget>[
               Expanded(
@@ -48,7 +49,12 @@ void rollDice() {
                       style: TextButton.styleFrom(
                         splashFactory: NoSplash.splashFactory,
                       ),
-                      onPressed: rollDice,
+                      onPressed: (){
+                        setState(() {
+                          leftDiceNumber = Random().nextInt(6) + 1;
+                        });
+
+                      },
                       child: Image.asset('assets/images/dice/dice$leftDiceNumber.png'))),
             
               Expanded(
@@ -56,11 +62,25 @@ void rollDice() {
                       style: TextButton.styleFrom(
                         splashFactory: NoSplash.splashFactory,
                       ),
-                      onPressed: rollDice ,
+                      onPressed: (){
+                        setState(() {
+                          rightDiceNumber = Random().nextInt(6) + 1;
+                        });
+
+                      },
                       child: Image.asset('assets/images/dice/dice$rightDiceNumber.png')))
              ],
                     ),
           ),
+          Expanded(
+            flex: 1,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(onPressed: rollDice,child: Text("Roll"),)
+              ],
+            ),
+          )
 
         ],
       ),
